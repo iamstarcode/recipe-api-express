@@ -4,11 +4,11 @@
     "colId": "35db2528-bcd7-4803-b9bf-36bfd10c3d62",
     "containerId": "",
     "name": "register",
-    "url": "localhost:8000/api/v1/user/register",
+    "url": "https://recepie-app.onrender.com/api/v1/user/register",
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-11-24T05:25:58.297Z",
-    "modified": "2022-11-24T09:45:08.473Z",
+    "modified": "2022-11-24T09:48:42.499Z",
     "headers": [],
     "params": [],
     "body": {
