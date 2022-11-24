@@ -10,6 +10,7 @@ const validateRequest = require("../validations");
 const {
   registerValidationSchema,
   loginValidationSchema,
+  updateValidationSchema,
 } = require("../validations");
 //
 
@@ -22,10 +23,8 @@ const {
 exports.register = asyncHandler(async (req, res) => {
   try {
     const { fullname, username, email, password } = req.body;
-    console.log("body", { ...req.body });
 
     const data = await registerValidationSchema.validateAsync({ ...req.body });
-    console.log("value", value);
 
     const userExist = await User.findOne({ email });
 
@@ -109,9 +108,9 @@ exports.getMe = asyncHandler(async (req, res) => {
  * @access Public
  */
 exports.updateProfile = asyncHandler(async (req, res) => {
-  const { fullname, username } = req.body;
-
   try {
+    const data = await updateValidationSchema.validateAsync({ ...req.body });
+    const { fullname, username } = data;
     const user = await User.findById(req.user._id);
 
     if (user) {

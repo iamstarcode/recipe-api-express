@@ -80,14 +80,23 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-11-24T05:21:38.944Z",
-    "modified": "2022-11-24T05:25:02.450Z",
+    "modified": "2022-11-24T07:35:59.645Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n  \"fullname\" : \"Bakare ABiola\",\n  \"username\" : \"iamstarcode\"\n}",
-      "form": []
-    },
+    "tests": []
+  },
+  {
+    "_id": "3bd8dc99-d5e3-47d8-ae8a-568492a3979c",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.thunderclient.com/welcome",
+    "url": "https://www.thunderclient.com/welcome",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-11-24T07:35:46.064Z",
+    "modified": "2022-11-24T07:35:46.064Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]

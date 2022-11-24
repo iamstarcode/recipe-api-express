@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-11-24T05:25:58.297Z",
-    "modified": "2022-11-24T06:39:30.802Z",
+    "modified": "2022-11-24T09:45:08.473Z",
     "headers": [],
     "params": [],
     "body": {
@@ -33,6 +33,66 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"email\" :\"iamstarcode@gmail.com\",\n  \"password\":\"password\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b6f7c11c-a92d-4f75-b9d1-4836c8b49450",
+    "colId": "35db2528-bcd7-4803-b9bf-36bfd10c3d62",
+    "containerId": "",
+    "name": "me",
+    "url": "localhost:8000/api/v1/user/me",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-11-24T07:11:32.408Z",
+    "modified": "2022-11-24T07:14:05.408Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzN2YxMWYyMGJkOGFkYzZmMmY3YmI4ZSIsImlhdCI6MTY2OTI3Mzc5NSwiZXhwIjoxNjY5MzYwMTk1fQ.hlPlHjbv87NaIjjvfMvqrlKNJYu_DCwQ79MzSqghoJg"
+    },
+    "tests": []
+  },
+  {
+    "_id": "c8256c77-e804-4187-a89b-189fea8134eb",
+    "colId": "35db2528-bcd7-4803-b9bf-36bfd10c3d62",
+    "containerId": "",
+    "name": "update-profile",
+    "url": "localhost:8000/api/v1/user/me",
+    "method": "PATCH",
+    "sortNum": 40000,
+    "created": "2022-11-24T07:13:48.605Z",
+    "modified": "2022-11-24T07:26:48.547Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"fullname\" : \"Bakare ABiola\",\n  \"username\" : \"iamstarcode\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzN2YxMWYyMGJkOGFkYzZmMmY3YmI4ZSIsImlhdCI6MTY2OTI3Mzc5NSwiZXhwIjoxNjY5MzYwMTk1fQ.hlPlHjbv87NaIjjvfMvqrlKNJYu_DCwQ79MzSqghoJg"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8b46d7f4-2b9e-45ec-8847-41663f694d57",
+    "colId": "35db2528-bcd7-4803-b9bf-36bfd10c3d62",
+    "containerId": "",
+    "name": "forgot-password",
+    "url": "localhost:8000/api/v1/user/forgotpassword",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2022-11-24T07:36:13.956Z",
+    "modified": "2022-11-24T07:37:22.971Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\" : \"iamstarcode@gmail.com\"\n}",
       "form": []
     },
     "tests": []
