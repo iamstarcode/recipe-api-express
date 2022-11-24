@@ -1,1 +1,93 @@
-[]
+[
+  {
+    "_id": "e69e8b1a-4fa4-43ed-add3-19bb61281555",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8000/api/v1/register",
+    "url": "localhost:8000/api/v1/register",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-24T05:21:04.025Z",
+    "modified": "2022-11-24T05:21:04.025Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "fullname",
+          "value": ""
+        },
+        {
+          "name": "username",
+          "value": ""
+        },
+        {
+          "name": "email",
+          "value": ""
+        },
+        {
+          "name": "password",
+          "value": ""
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "b3e6ff56-61a3-41e9-87e2-c94513ea3500",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8000/api/v1/user/register",
+    "url": "localhost:8000/api/v1/user/register",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-24T05:21:31.637Z",
+    "modified": "2022-11-24T05:21:31.637Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "fullname",
+          "value": ""
+        },
+        {
+          "name": "username",
+          "value": ""
+        },
+        {
+          "name": "email",
+          "value": ""
+        },
+        {
+          "name": "password",
+          "value": ""
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "f05e74df-d070-4a66-b366-f5334e9c0262",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8000/api/v1/user/register",
+    "url": "localhost:8000/api/v1/user/register",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-11-24T05:21:38.944Z",
+    "modified": "2022-11-24T05:25:02.450Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"fullname\" : \"Bakare ABiola\",\n  \"username\" : \"iamstarcode\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
