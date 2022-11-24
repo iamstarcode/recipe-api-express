@@ -7,7 +7,10 @@ const jwt = require("jsonwebtoken");
 
 //Valdations
 const validateRequest = require("../validations");
-const { registerValidationSchema } = require("../validations");
+const {
+  registerValidationSchema,
+  loginValidationSchema,
+} = require("../validations");
 //
 
 /**
@@ -21,13 +24,13 @@ exports.register = asyncHandler(async (req, res) => {
     const { fullname, username, email, password } = req.body;
     console.log("body", { ...req.body });
 
-    const value = await registerValidationSchema.validateAsync({ ...req.body });
+    const data = await registerValidationSchema.validateAsync({ ...req.body });
     console.log("value", value);
 
     const userExist = await User.findOne({ email });
 
     if (!userExist) {
-      const user = new User({ ...value });
+      const user = new User({ ...data });
       await user.save();
 
       return res.status(201).json({
@@ -51,34 +54,35 @@ exports.register = asyncHandler(async (req, res) => {
  * @access Public
  */
 exports.login = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
+  try {
+    const data = await loginValidationSchema.validateAsync({ ...req.body });
 
-  // Validate email and password
-  if (!email || !password) {
+    const { email, password } = data;
+    // Check for user
+    const user = await User.findOne({ email }).select("+password");
+
+    if (!user) {
+      res.status(401);
+      throw new Error("Invalid Credentials");
+    }
+
+    // check if password matches
+    const isMatch = await user.matchPassword(password);
+
+    if (!isMatch) {
+      res.status(401);
+      throw new Error("Invalid Credentials");
+    }
+    res.status(200).json({
+      success: true,
+      message: "Logged in successfully",
+      access_token: genToken(user._id),
+    });
+  } catch (error) {
+    console.log(error);
     res.status(404);
-    throw new Error("Please provide an email and password");
+    throw new Error(error);
   }
-
-  // Check for user
-  const user = await User.findOne({ email }).select("+password");
-
-  if (!user) {
-    res.status(401);
-    throw new Error("Invalid Credentials");
-  }
-
-  // check if password matches
-  const isMatch = await user.matchPassword(password);
-
-  if (!isMatch) {
-    res.status(401);
-    throw new Error("Invalid Credentials");
-  }
-  res.status(200).json({
-    success: true,
-    message: "Logged in successfully",
-    access_token: genToken(user._id),
-  });
 });
 
 /**
