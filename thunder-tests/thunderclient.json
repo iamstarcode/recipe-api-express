@@ -23,16 +23,16 @@
     "colId": "35db2528-bcd7-4803-b9bf-36bfd10c3d62",
     "containerId": "",
     "name": "login",
-    "url": "localhost:8000/api/v1/user/register",
+    "url": "localhost:8000/api/v1/user/login",
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-11-24T06:48:22.438Z",
-    "modified": "2022-11-24T06:48:55.810Z",
+    "modified": "2022-11-24T06:52:40.517Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"fullname\" : \"Bakare ABiola\",\n  \"username\" : \"iamstarcode\",\n  \"email\" :\"iamstarcode@gmail.com\",\n  \"password\":\"password\"\n}",
+      "raw": "{\n  \"email\" :\"iamstarcode@gmail.com\",\n  \"password\":\"password\"\n}",
       "form": []
     },
     "tests": []

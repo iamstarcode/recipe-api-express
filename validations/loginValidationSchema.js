@@ -5,4 +5,4 @@ const loginValidationSchema = Joi.object().keys({
   password: Joi.string().required().min(3),
 });
 
-module.exports = registerValidationSchema;
+module.exports = loginValidationSchema;
